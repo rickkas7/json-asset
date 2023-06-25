@@ -1,0 +1,27 @@
+{
+  "name": "@rickkas7/json-asset",
+  "version": "0.0.1",
+  "description": "Tool for generating a JSON object in a file from a folder of assets",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rickkas7/json-asset.git"
+  },
+  "author": "rickkas7@rickkas7.com",
+  "contributors": [],
+  "license": "MIT",
+  "dependencies": {
+    "@juanelas/base64": "^1.1.2",
+    "yargs": "^17.7.2"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "bugs": {
+    "url": "https://github.com/rickkas7/json-asset/issues"
+  },
+  "homepage": "https://github.com/rickkas7/json-asset/",
+  "main": "app.js",
+  "scripts": {
+    "test": "node test.js --run --clean"
+  }
+}
