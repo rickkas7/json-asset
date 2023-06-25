@@ -22,7 +22,7 @@ if (!argv.output.endsWith('.js') && !argv.output.endsWith('.json')) {
     return -1;
 }
 
-let extText = ['txt', 'html', 'hbs'];
+let extText = ['txt', 'html', 'hbs', 'cpp', 'c', 'h', 'ino', 'properties', 'js', 'ts'];
 if (argv.extText) {
     for(let s of argv.extJson.split(',')) {
         let s = s.trim();
@@ -52,7 +52,7 @@ if (stats.isFile()) {
 
 else {
     for(const dirEnt of fs.readdirSync(argv.input, {withFileTypes:true})) {
-        if (dirEnt.isFile()) {
+        if (dirEnt.isFile() && !dirEnt.name.startsWith('.')) {
             processFile(path.join(argv.input, dirEnt.name));
         }
     }
