@@ -58,12 +58,16 @@ else {
     }
 }
 
-let outputStr;
+let outputStr = '';
+if (argv.exportDefault) {
+    outputStr += 'module.exports = ';
+}
+
 if (argv.indent) {
-    outputStr = JSON.stringify(outputJson, null, argv.indent);
+    outputStr += JSON.stringify(outputJson, null, argv.indent);
 }
 else {
-    outputStr = JSON.stringify(outputJson);
+    outputStr += JSON.stringify(outputJson);
 }
 fs.writeFileSync(argv.output, outputStr);
 
